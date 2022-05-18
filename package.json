@@ -1,0 +1,50 @@
+{
+  "name": "mail-microservice",
+  "version": "1.0.0",
+  "description": "a microservice that handle email",
+  "main": "index.js",
+  "scripts": {
+    "test-e2e": "set NODE_ENV=test && mocha ./dist/test/**/*.spec.js --timeout 100000",
+    "test-unit": "mocha ./dist/src/**/**/*.spec.js --timeout 100000",
+    "start": "set NODE_ENV=production && node dist/src/index.js",
+    "dev": "set NODE_ENV=development && concurrently \"tsc -w\" \"nodemon ./dist/src/index.js\"",
+    "test-server": "set NODE_ENV=test && node dist/src/index.js",
+    "test": "yarn test-unit && yarn test-e2e",
+    "watch": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eco-developer/mail-microservice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eco-developer/mail-microservice/issues"
+  },
+  "homepage": "https://github.com/Eco-developer/mail-microservice#readme",
+  "dependencies": {
+    "@types/chai": "^4.3.1",
+    "@types/concurrently": "^7.0.0",
+    "@types/cors": "^2.8.12",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.13",
+    "@types/mocha": "^9.1.1",
+    "@types/morgan": "^1.9.3",
+    "@types/node": "^17.0.34",
+    "@types/nodemailer": "^6.4.4",
+    "@types/nodemon": "^1.19.1",
+    "@types/uuid": "^8.3.4",
+    "axios": "^0.27.2",
+    "chai": "^4.3.6",
+    "concurrently": "^7.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mocha": "^10.0.0",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.7.5",
+    "nodemon": "^2.0.16",
+    "uuid": "^8.3.2"
+  }
+}
