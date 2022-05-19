@@ -8,7 +8,7 @@
     "test-unit": "mocha ./dist/src/**/**/*.spec.js --timeout 100000",
     "start": "set NODE_ENV=production && node dist/src/index.js",
     "build": "tsc",
-    "heroku-postbuild": "yarn build",
+    "postinstall": "yarn build",
     "dev": "set NODE_ENV=development && concurrently \"tsc -w\" \"nodemon ./dist/src/index.js\"",
     "test-server": "set NODE_ENV=test && node dist/src/index.js",
     "test": "yarn test-unit && yarn test-e2e",
