@@ -10,7 +10,6 @@ describe('test nodemailer send message', () => {
             text: "This is a test message.", // plain text body
             html: "<b>this is a test message.</b>", // html body
         });
-        console.log(info)
         expect(info).to.have.property("messageId")
         expect(info.messageId).to.be.a("string");
     });
