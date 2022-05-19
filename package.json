@@ -7,7 +7,8 @@
     "test-e2e": "set NODE_ENV=test && mocha ./dist/test/**/*.spec.js --timeout 100000",
     "test-unit": "mocha ./dist/src/**/**/*.spec.js --timeout 100000",
     "start": "set NODE_ENV=production && node dist/src/index.js",
-    "heroku-postbuild": "tsc",
+    "build": "tsc",
+    "heroku-postbuild": "yarn build",
     "dev": "set NODE_ENV=development && concurrently \"tsc -w\" \"nodemon ./dist/src/index.js\"",
     "test-server": "set NODE_ENV=test && node dist/src/index.js",
     "test": "yarn test-unit && yarn test-e2e",
@@ -48,5 +49,5 @@
     "nodemon": "^2.0.16",
     "uuid": "^8.3.2"
   },
-  "engines": { "node": "16.14.0" }
+  "engines": { "node": "16.13.0" }
 }
